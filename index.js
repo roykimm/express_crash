@@ -9,17 +9,17 @@ oracledb.autoCommit = true;
 const app = express();
 
 let conn;
-// oracledb.getConnection({
-//     user : 'gobella',
-//     password : '1234',
-//     connectString : "gobella.kr/XE"
-// }, (err, con) => {
-//     if(err) {
-//         console.log('접속에 실패했습니다.', err);
-//     }
-//     console.log('오라클 db에 접속성공 하였습니다.');
-//     conn = con;
-// })
+oracledb.getConnection({
+    user : 'gobella',
+    password : '1234',
+    connectString : "gobella.kr/XE"
+}, (err, con) => {
+    if(err) {
+        console.log('접속에 실패했습니다.', err);
+    }
+    console.log('오라클 db에 접속성공 하였습니다.');
+    conn = con;
+})
 
 // init middleware
 //app.use(logger);
