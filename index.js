@@ -51,6 +51,6 @@ app.use(express.static(path.join(__dirname, "public")));
 // Members API routes
 app.use('/api/members', require('./routes/api/members'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 7040;
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`));
