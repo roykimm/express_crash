@@ -39,7 +39,7 @@ app.use(express.urlencoded({extended : false}));
 // homepage route
 app.get('/', (req,res) => {
     res.render('index', {
-        title : 'Member App',
+        title : '달개금융',
         members : members
     });
 })
