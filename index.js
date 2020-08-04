@@ -44,12 +44,22 @@ app.get('/', (req,res) => {
     });
 })
 
+app.get('/word', (req,res) => {
+    res.render('word', {
+        title : '단어장',
+        words : {wordeng : 'go', workkor : '가다'}
+    })
+})
+
 // set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
 
 // Members API routes
 app.use('/api/members', require('./routes/api/members'));
+
+// Words API router
+app.use('/api/words', require('./routes/api/words'));
 
 const PORT = process.env.PORT || 7040;
 
